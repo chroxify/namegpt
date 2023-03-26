@@ -9,6 +9,7 @@ specifiers:
   eslint-config-next: 13.2.4
   next: 13.2.4
   postcss: ^8.4.21
+  prettier: ^2.8.7
   react: 18.2.0
   react-dom: 18.2.0
   tailwindcss: ^3.2.7
@@ -28,6 +29,7 @@ dependencies:
 devDependencies:
   autoprefixer: 10.4.14_postcss@8.4.21
   postcss: 8.4.21
+  prettier: 2.8.7
   tailwindcss: 3.2.7_postcss@8.4.21
 
 packages:
@@ -1996,6 +1998,12 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
     dev: false
+
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
 
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
