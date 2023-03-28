@@ -1,13 +1,17 @@
+import * as React from 'react';
+
 type InputFieldProps = {
   field: string
   title: string
   placeholder: string
+  setPrompt: (v: string) => void
 }
 
 export default function InputField({
   field,
   title,
   placeholder,
+  setPrompt
 }: InputFieldProps) {
   return (
     <div className='flex flex-col w-full'>
@@ -20,7 +24,7 @@ export default function InputField({
         </div>
         <h1 className='text-lg font-semibold text-text'>{title}</h1>
       </div>
-      <textarea
+      <textarea onChange={(v) => setPrompt(v.target.value)}
         className='h-[80%] mt-2 p-3 border-2 border-text focus:outline-none rounded-lg bg-secondary text-text placeholder-text placeholder-opacity-70 text-xs md:text-sm lg:text-base'
         placeholder={placeholder}
       ></textarea>

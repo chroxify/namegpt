@@ -1,11 +1,20 @@
 type ButtonProps = {
-  title: string
+  title: string,
+  notify: () => void
 }
 
-export default function Button({ title }: ButtonProps) {
+export default function Button({ title, notify }: ButtonProps) {
+  const handleClick = () => {
+    navigator.clipboard.writeText(title);
+
+    // Notify user that value has been copied to clipboard
+    notify();
+  };
+  
   return (
-    <button className='flex items-center justify-center border-2 border-text space-x-1 w-[180px] h-[45px] bg-primary bg-opacity-50 rounded-lg transition duration-200 hover:shadow-[5px_5px_0px_0px_rgba(0,0,0)]'>
-      <h1 className='text-base font-semibold text-text'>Generate Names</h1>
+    // Button with onClick that copies value to clipboard
+    <button onClick={handleClick} className='flex items-center justify-center border-2 border-text space-x-1 w-[180px] h-[45px] bg-secondary bg-opacity-50 rounded-lg transition duration-[375ms] hover:scale-105'>
+      <h1 className='text-lg font-semibold text-text'>{title}</h1>
     </button>
   )
 }
