@@ -26,8 +26,7 @@ export async function POST(request: Request) {
   // Set payload
   const payload = {
     model: 'text-davinci-003',
-    prompt:
-      `Product description: ${prompt}\nAmount to generate: ${amount}\nMAKE NAME BE 1 WORD UNIQUE NON COMBINED WORD (NO CAMELCASE COMBINATIONS)\nRETURN RESULTS AS JSON {"names": []}`,
+    prompt: `Product description: ${prompt}\nAmount to generate: ${amount}\nMAKE NAME BE 1 WORD UNIQUE NON COMBINED WORD (NO CAMELCASE COMBINATIONS)\nRETURN RESULTS AS JSON {"names": []}`,
     temperature: 0.8,
     max_tokens: 50,
     top_p: 1,

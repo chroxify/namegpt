@@ -9,13 +9,13 @@ export default function DropDownField({
   field,
   title,
   options,
-  setAmount
+  setAmount,
 }: DropDownFieldProps) {
   return (
     <div className='flex flex-col w-full'>
       {/* Field Title Row */}
       <div className='flex justify-start items-center space-x-3'>
-        <div className='flex items-center border-2 border-text bg-secondary justify-center  rounded-lg w-[35px] h-[35px] '>
+        <div className='flex items-center border-2 border-text bg-secondary justify-center rounded-lg w-[33px] h-[33px] md:w-[35px] md:h-[35px]'>
           <h1 className='text-base font-semibold text-text pl-[1px]'>
             {field}.
           </h1>
@@ -23,8 +23,10 @@ export default function DropDownField({
         <h1 className='text-lg font-semibold text-text'>{title}</h1>
       </div>
       {/* Dropdown with "Five" as default selection */}
-      <select onChange={(v) => setAmount(v.target.value)}
-      className='mt-2 w-full bg-secondary border-2 border-text  text-text text-base py-3 px-2 pr-8 rounded-lg leading-tight focus:outline-none appearance-none'>
+      <select
+        onChange={(v) => setAmount(v.target.value)}
+        className='mt-2 w-full bg-secondary border-2 border-text text-text text-sm lg:text-base py-3 px-2 pr-8 rounded-lg leading-tight focus:outline-none appearance-none'
+      >
         {options.map((option, index) => (
           <option key={index} value={option} selected={option === 'Three'}>
             {option}

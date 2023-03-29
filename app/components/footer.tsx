@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className='flex flex-col items-center w-[85%]'>
+    <footer className='flex flex-col items-center w-[80%] sm:w-[65%] md:w-[75%] lg:w-[60%]'>
       {/* Horizontal Divider */}
       <hr className='border-[1.5px] border-text opacity-30 rounded w-full' />
 
