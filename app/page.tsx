@@ -29,8 +29,8 @@ export default function Home() {
         color: '#191C1B',
       },
       iconTheme: {
-        primary: '#191C1B',
-        secondary: '#fff',
+        primary: '#AEECDD',
+        secondary: '#000'
       },
     })
 
@@ -78,7 +78,6 @@ export default function Home() {
 
       {/* Make sure theres always min. 20px space between, incase there is not palce div with mt-20 in between */}
       <main className='flex flex-col items-center w-[80%] md:w-[60%] xl:w-[50%] space-y-10'>
-        {/* Content */}
         {/* Github Button */}
         <ImageButton
           title='Star on Github'
@@ -118,7 +117,7 @@ export default function Home() {
         <button
           onClick={generateNames}
           disabled={loading}
-          className='flex items-center justify-center border-2 border-text space-x-1 w-40 h-11 md:w-[180px] md:h-[45px] bg-primary bg-opacity-50 rounded-lg transition duration-[400ms] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)]'
+          className='flex items-center justify-center border-2 border-text space-x-1 w-40 h-11 md:w-[180px] md:h-[45px] bg-primary rounded-lg transition duration-[400ms] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)]'
         >
           <h1 className='md:text-lg font-semibold text-text'>
             {loading ? 'Loading...' : 'Generate Names'}
