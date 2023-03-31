@@ -15,9 +15,9 @@ export default function Button({ title, notify }: ButtonProps) {
     // Button with onClick that copies value to clipboard
     <button
       onClick={handleClick}
-      className='flex items-center justify-center border-2 border-text space-x-1 w-40 h-11 md:w-[180px] md:h-[45px] bg-secondary rounded-lg transition duration-[375ms] hover:scale-105'
+      className='flex items-center justify-center border-2 border-text space-x-1 w-full h-[45px] bg-secondary rounded-lg transition duration-[375ms] hover:scale-105'
     >
-      <h1 className='md:text-lg font-semibold text-text'>{title}</h1>
+      <h1 className='lg:text-lg font-semibold text-text'>{title}</h1>
     </button>
   )
 }

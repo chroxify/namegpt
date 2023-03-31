@@ -23,6 +23,7 @@ export default function Home() {
     toast.success('Name copied!', {
       position: 'bottom-center',
       style: {
+        height: '45px',
         border: '2px solid #191C1B',
         borderRadius: '8px',
         background: '#fff',
@@ -32,6 +33,7 @@ export default function Home() {
         primary: '#AEECDD',
         secondary: '#000'
       },
+      className: 'font-semibold',
     })
 
   const { toasts } = useToasterStore()
@@ -106,7 +108,7 @@ export default function Home() {
           <DropDownField
             field='2'
             title='Amount to generate.'
-            options={['One', 'Three', 'Five']}
+            options={['Three', 'Six', 'Nine']}
             setAmount={(v: string) => {
               setAmount(v)
             }}
@@ -127,43 +129,26 @@ export default function Home() {
         {/* Results */}
         {/* Show results incase names > 0, else show placeholder div */}
         {names.length > 0 ? (
-          <div
-            className={`flex flex-col items-center w-[60%] space-y-8 mt-10 mb-10`}
-          >
-            {/* Title */}
-            <h1 className='tracking-wide font-extrabold text-center text-text text-2xl md:text-3xl lg:text-4xl'>
-              Here are your results!
-            </h1>
+            <div className={`flex flex-col items-center w-[90%] sm:w-[70%] md:w-[95%] lg:w-[80%] space-y-8 mt-10 mb-10`}>
+              {/* Title */}
+              <h1 className='tracking-wide font-extrabold text-center text-text text-2xl md:text-3xl lg:text-4xl'>
+                Here are your results!
+              </h1>
 
-            {/* Grid with buttons, 3 per row (allign center so that if length of names is longer than 3 then it shows 2 rows) */}
-            <div className='flex flex-col items-center space-y-6 sm:w-[80%] md:w-[80%] lg:w-[70%]'>
-              <div className='flex flex-row items-center justify-center space-x-6'>
-                {names.map((name, index) => {
-                  if (index < 3) {
-                    return <Button title={name} notify={notify} />
-                  } else {
-                    return null
-                  }
-                })}
+              {/* Results */}
+              <div className='grid grid-cols-2 md:grid-cols-3 gap-6 w-full items-center justify-center place-items-center'>
+                {names.map((name, index) => (
+                  <Button 
+                    key={index}
+                    title={name}
+                    notify={notify}
+                  />
+                ))}
               </div>
-              <div
-                className={`${
-                  names.length <= 3 ? 'hidden' : 'flex'
-                } flex-row items-center justify-center space-x-6`}
-              >
-                {names.map((name, index) => {
-                  if (index >= 3) {
-                    return <Button title={name} notify={notify} />
-                  } else {
-                    return null
-                  }
-                })}
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div className='mb-24'></div>
-        )}
+  </div>
+) : (
+  <div className='mb-24'></div>
+)}
       </main>
       {/* Footer */}
       <Footer />
