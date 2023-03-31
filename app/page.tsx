@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import toast, { Toaster, useToasterStore } from 'react-hot-toast'
 import Header from './components/header'
 import Footer from './components/footer'
+import { Analytics } from '@vercel/analytics/react';
 import ImageButton from './components/buttons/imageButton'
 import Button from './components/buttons/button'
 import InputField from './components/fields/inputField'
@@ -72,6 +73,9 @@ export default function Home() {
 
   return (
     <div className='w-screen h-screen flex flex-col items-center justify-between gap-20'>
+      {/* Analytics */}
+      <Analytics />
+      
       {/* Toasts */}
       <Toaster />
 
