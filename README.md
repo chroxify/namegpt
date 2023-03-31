@@ -1,8 +1,8 @@
-# [NameGPT](namegpt.chroxify.com)
+# [NameGPT](https://namegpt.chroxify.com)
 
 **Description**:  This project lets you generate unique project names based on a simpel description.
 
-[![NameGPT](./public/screenshot.png)](https://namegpt.vercel.com)
+[![NameGPT](./public/screenshot.png)](https://namegpt.chroxify.com)
 
 ## How it works?
 
@@ -31,4 +31,4 @@ This will run the application in dev mode on `https://localhost:3000`.
 ## One-Click Deployment
 Deploy easily with one click using [Vercel](https://vercel.com)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/chroxify/namegpt)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/chroxify/namegpt&env=OPENAI_API_KEY&project-name=NameGPT&repo-name=nameGPT)

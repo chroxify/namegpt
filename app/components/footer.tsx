@@ -23,7 +23,7 @@ export default function Footer() {
         {/* Links */}
         <div className='flex items-center space-x-5 m-5'>
           <Link
-            href='https://vercel.com'
+            href='https://vercel.com/new/clone?repository-url=https://github.com/chroxify/namegpt&env=OPENAI_API_KEY&project-name=NameGPT&repo-name=nameGPT'
             className='opacity-80 hover:opacity-100'
           >
             <Image src='/vercel.svg' alt='Vercel' width={25} height={25} />
