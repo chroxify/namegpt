@@ -18,13 +18,6 @@ export default function Footer() {
           >
             OpenAI
           </Link>{' '}
-          and{' '}
-          <Link
-            href='https://nextjs.org/'
-            className='text-text font-semibold hover:underline'
-          >
-            Next.js
-          </Link>
         </p>
 
         {/* Links */}
