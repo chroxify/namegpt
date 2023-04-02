@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Inter } from 'next/font/google'
 import toast, { Toaster, useToasterStore } from 'react-hot-toast'
@@ -84,13 +85,14 @@ export default function Home() {
 
       {/* Make sure theres always min. 20px space between, incase there is not palce div with mt-20 in between */}
       <main className='flex flex-col items-center w-[80%] md:w-[60%] xl:w-[50%] space-y-10'>
-        {/* Github Button */}
-        <ImageButton
-          title='Star on Github'
-          link='https://github.com/chroxify/namegpt'
-          image='/star.svg'
-          alt='star'
-        />
+        {/* Producthunt Button */}
+        <Link href="https://www.producthunt.com/posts/namegpt?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-namegpt" target="_blank">
+          <img 
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=387488&theme=dark" 
+          alt="NameGPT - | Product Hunt"
+          width="200" 
+          height="54"/>
+        </Link>
 
         {/* Title */}
         <h1 className='tracking-wide font-extrabold text-center text-text text-3xl sm:text-3xl md:text-4xl lg:text-5xl'>
