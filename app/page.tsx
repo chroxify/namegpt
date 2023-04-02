@@ -17,7 +17,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false)
   const [amount, setAmount] = useState('Three')
   const [prompt, setPrompt] = useState(
-    'An website that summarizes blog posts for you.'
+    'eg. A website that summarizes blog posts for you.'
   )
 
   const notify = () =>

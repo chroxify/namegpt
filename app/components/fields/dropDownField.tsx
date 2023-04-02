@@ -28,7 +28,7 @@ export default function DropDownField({
         className='mt-2 w-full bg-secondary border-2 border-text text-text text-sm lg:text-base py-3 px-2 pr-8 rounded-lg leading-tight focus:outline-none appearance-none'
       >
         {options.map((option, index) => (
-          <option key={index} value={option} selected={option === 'Three'}>
+          <option key={index} value={option}>
             {option}
           </option>
         ))}

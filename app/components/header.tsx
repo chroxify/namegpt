@@ -21,7 +21,7 @@ export default function Header() {
           </div>
         </div>
 
-        <Link href='https://github.com'>
+        <Link href='https://github.com/chroxify/namegpt'>
           <Image
             src='/github.svg'
             alt='Github'
@@ -31,6 +31,7 @@ export default function Header() {
           />
         </Link>
       </div>
+
       {/* Divider */}
       <hr className='border-[1.5px] border-text rounded w-full' />
     </nav>
