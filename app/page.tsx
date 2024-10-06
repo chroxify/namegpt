@@ -80,7 +80,7 @@ export default function Home() {
       {process.env.NODE_ENV === "production" && (
         <Script
           src="https://cdn.seline.so/seline.js"
-          data-token="52947f744a8a4fa"
+          data-token="f7bf4093f2d5899"
           async
         />
       )}
