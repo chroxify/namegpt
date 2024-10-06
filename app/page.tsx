@@ -10,6 +10,7 @@ import ImageButton from './components/buttons/imageButton'
 import Button from './components/buttons/button'
 import InputField from './components/fields/inputField'
 import DropDownField from './components/fields/dropDownField'
+import Script from "next/script";
 
 const TOAST_LIMIT = 3
 
@@ -76,6 +77,13 @@ export default function Home() {
     <div className='w-screen h-screen flex flex-col items-center justify-between gap-20'>
       {/* Analytics */}
       <Analytics />
+      {process.env.NODE_ENV === "production" && (
+        <Script
+          src="https://cdn.seline.so/seline.js"
+          data-token="52947f744a8a4fa"
+          async
+        />
+      )}
       
       {/* Toasts */}
       <Toaster />
